@@ -1,0 +1,266 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+body 
+{
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+
+/* header style here */
+#header 
+{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #5c96f2;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    z-index: 5 !important;
+
+}
+.call-us
+{
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+
+}
+
+.search-box
+{
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+.search-box input 
+{
+    width: 90%;
+    height: auto;
+    padding: 8px;
+}
+
+.social-media 
+{
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+/* navbar style here */
+
+#navbar
+{
+width: 100%;
+height: auto;
+margin: 0;
+padding: 5px;
+background-color: black;
+display: flex;
+flex-direction: row;
+} 
+.logo 
+{
+width: 20%;
+height: auto;
+padding: 10px;
+font-size: 20px;
+}
+.logo span 
+{
+color: white;
+font-size: 28px;
+}
+.nav
+{
+width: 80%;
+height: auto;
+padding: 10px;
+}
+
+.nav ul li 
+{
+display: inline-block;
+padding: 5px 15px;
+font-size: 18px;
+}
+.nav a 
+{
+text-decoration: none;
+color: white;
+}
+
+/* slider or hero section start here */
+
+#slider
+{
+width: 96%;
+height: 350px;
+margin: auto;
+margin-top: 1%;
+}
+.banner img
+{
+width: 100%;
+height: 350px;
+z-index: -5 !important;
+
+}
+
+#content
+{
+    width: 96%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.leftsidebar
+{
+
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    background-color:#5c96f2;
+    margin-top: 3%;
+}
+.rightsidebar
+{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    margin-top: 3%;
+    background-color: white;
+}
+.product-category
+{
+    padding: 25px;
+    color: white;
+}
+.product-category h1,.store-locations h1 
+{
+    background-color: black;
+    padding: 8px;
+}
+.product-category ul li 
+{
+    display: block;
+    padding: 15px 50px;
+    font-size: 20px;
+}
+.product-category a 
+{
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.store-locations
+{
+    padding: 25px;
+    color: white;
+    /* background: url('../images/products_locations.avif') no-repeat;
+    background-size: cover; */
+}
+.text-overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5,0,0,0.8) !important;
+    padding: 5px;
+}
+.text-overlay p 
+{
+    padding: 5px;
+    
+}
+.product-area
+{
+    width: 30%;
+    height: 350px;
+    margin: 2px;
+    padding: 10px;
+    margin-top: 3%;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    display: inline-block;
+
+}
+.product-area:hover
+{
+    width: 30%;
+    height: 350px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 1px #5c96f2;
+    background-color: white;
+}
+.product-area img 
+{
+    width: 100%;
+    height: 300px;
+}
+.product-area p 
+{
+    font-size: 20px;
+}
+.product-area span 
+{
+    font-size: 25px;
+    color: green;
+}
+
+.contact-form
+{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 15px 25px;
+}
+.contact-form input  
+{
+    width: 450px;
+    height: auto;
+    padding: 10px;
+
+}
+.contact-form input[type="submit"]
+{
+    width: 235px;
+    height: auto;
+    padding: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.contact-form input[type="reset"]
+{
+    width: 235px;
+    height: auto;
+    padding: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+.contact-form h1 
+{
+    width: 65%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 5%;
+
+}

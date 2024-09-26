@@ -1,0 +1,29 @@
+step 1: create an account on github.com
+https://github.com/
+
+step 2:after login in github create an repository(folder) on github server. 
+
+ repository url create  =>
+  https://github.com/Priyank190/php-1130am-mwf-alldata.git
+
+step 3: after create repository download git software to send local data on github server.
+
+      https://git-scm.com/download/win
+
+step 4: after install git software open gitbash from windows start menu
+
+step 5: github all command to send data from local pc to github server
+
+
+        a)git init
+        b)git add .
+        c)git commit -m '25-12-2023 all data uloaded'
+        d)git remote add origin https://github.com/Brijesh1990/php-1130mwf.git
+        e) git push -u origin master     
+
+
+    how to download github data using command
+
+
+        a) git clone https://github.com/Brijesh1990/php-1130mwf.git 
+       

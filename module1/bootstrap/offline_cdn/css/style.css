@@ -1,0 +1,35 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+
+}
+.content 
+{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color:#0d192b;
+}
+
+.navbar 
+{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.navbar ul li 
+{
+    display: inline-block;
+    padding: 1px 25px;
+}
+.navbar a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu 
+{
+    display: block !important;
+}

@@ -1,0 +1,27 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.sidebar-links
+{
+    width: 100%;
+    height: auto;
+}
+
+.sidebar-links ul li 
+{
+    display: block;
+    padding: 15px 0px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sidebar-links a 
+{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}

@@ -1,0 +1,21 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: aliceblue !important;
+}
+.calculator-result
+{
+    width: auto;
+    height: auto;
+}
+.calculator-result input 
+{
+    padding: 12px !important;
+    background-color: aliceblue !important;
+    border: 0 !important;
+    text-align: right !important;
+    font-size: 28px !important;
+}

@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/([0-9a-zA-Z_-]*)$ api.php?order_id=$1 [QSA,NC,L]

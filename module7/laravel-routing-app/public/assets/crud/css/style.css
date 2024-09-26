@@ -1,0 +1,35 @@
+body 
+{
+background-color: lightgray;
+}
+.navbar-link
+{
+width: 100%;
+height: auto;
+}
+.navbar-link li 
+{
+display: inline-block;
+padding: 0px 20px;
+}
+.navbar-link a 
+{
+text-decoration: none;
+list-style-type: none;
+color: white;
+}
+
+/* media query call */
+/* mobile resulations */
+@media only  screen and (min-width:320px) and (max-width:480px) 
+{
+.container 
+{
+width: 80% !important;
+height: auto !important;
+}
+.input-group
+{
+width: 100% !important;
+}
+}

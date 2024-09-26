@@ -1,0 +1,102 @@
+what is mysql ?
+  mysql is a database
+  mysql is used to create database connection 
+  mysql is case-senstive
+  mysql provides connection string 
+  mysql is provides some function of database for connection
+
+
+what is mysqli ?
+  mysqli is a database
+  mysqli is improved verson of mysql 
+  mysqli is used to create database connection 
+  mysqli is case-senstive
+  mysqli provides connection string 
+  mysqli is provides some function of database  connection
+    
+    
+    
+    1) how to connect with database 
+
+         $con=new mysqli("localhost","root","","dbname");
+
+         or 
+         
+         $ser="localhost";
+         $user="root";
+         $pass="";
+         $dbname="dname";
+         $con=new mysqli($ser,$user,$pass,$dbname);
+
+    2) how to execute a query 
+
+        $insert="insert into tablename(columnanme) value('values')";
+       
+        $query=mysqli_query($con,$insert);
+
+        Note : execute a query is compalsaory
+
+    3) how to fetch a data or select a data 
+
+        $select="select * from tablename";
+        $query=mysqli_query($con,$select);
+        
+        $fetch=mysqli_fetch_array($query);   //fetch data in array 
+        $fetch=mysqli_fetch_assoc($query);   //fetch data in associative array 
+        $fetch=mysqli_fetch_object($query);  //fetch data in object 
+        $fetch=mysqli_num_rows($query);      //check number of rows  
+
+
+    4) how to check connection 
+
+            
+         $ser="localhost";
+         $user="root";
+         $pass="";
+         $dbname="dname";
+         $con=new mysqli($ser,$user,$pass,$dbname);
+
+         if($con)
+         {
+            echo "connection stablished successfully";    
+         }
+
+        else 
+         {
+            die(mysqli_error($con));
+         }
+
+
+     5) how to closed database connection 
+
+           mysqli_close($con);    
+
+
+
+
+what is difference b/w sql and mysql ?
+
+      SQL => sql is a language
+             sql is case-insenstive
+             sql is create database | table structure
+
+
+      MYSQL : mysql is database 
+              mysql is case-senstive 
+              mysql is stored informations 
+
+          
+ what is difference b/w RDBMS & DBMS  
+
+     RDBMS : stands for relational  database managements 
+             RDBMS manage database 
+             RDBMS follow MF code rules to manage all databases 
+
+
+     DBMS : stands for database management systems 
+            DBMS manage all relational b/w tables 
+            DBMS also follow to manage all database MF code rules 
+
+            
+                                  
+     

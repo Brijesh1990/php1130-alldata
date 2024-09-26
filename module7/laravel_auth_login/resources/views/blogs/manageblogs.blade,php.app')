@@ -1,0 +1,41 @@
+@extends('layouts.app')
+@section('content')
+<div class="container p-3">
+<div class="col-md-12">
+<div class="card">
+<div class="card-header">{{ __('Dashboard') }}</div>
+<div class="card-body">
+@if (session('status'))
+<div class="alert alert-success" role="alert">
+{{ session('status') }}
+</div>
+@endif
+
+<!-- create a dashboard here -->
+
+<div class="row">
+<div class="col-md-4 shadow">
+<ul class="sidebar-links">
+<ul>
+<li><a href="/managecustomers">Manage Customers</a></li>
+<li><a href="/addblogs">Add Blogs</a></li>
+<li><a href="/manageblogs">Manage Blogs</a></li>
+<li><a href="/managecontact">Manage Contact</a></li>
+<li><a href="/managefeedback">Manage Feedback</a></li>
+
+</ul>
+
+</ul>
+</div>
+<div class="col-md-8">
+<h2 class="text-center">Manage Blogs here</h2>
+
+<form method="post">
+@csrf 
+
+</form>    
+</div>
+</div>
+</div>
+
+@endsection

@@ -1,0 +1,38 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.navbar-nav
+{
+    margin-left: 50%;
+}
+.navbar-nav li 
+{
+    display: inline-block;
+    padding:5px 25px;
+}
+.navbar-brand 
+{
+    color: white !important;
+}
+.navbar-nav a 
+{
+    color: white !important;
+    text-decoration: none;
+    list-style-type: none;
+}
+.sidebar-link li 
+{
+    display: block;
+    padding: 15px 8px;
+}
+.sidebar-link a 
+{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    list-style-type: none;
+}

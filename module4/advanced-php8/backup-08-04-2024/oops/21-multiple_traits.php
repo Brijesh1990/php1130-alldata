@@ -1,0 +1,47 @@
+<?php 
+/* traits are defined in php 7 and 8 
+   traits is used to inheritance in a simple way
+   traits are used to access one child class properties by another class 
+
+*/
+
+trait A 
+{
+    public function display() 
+    {
+        $name="Hi my name is Brijesh"."<br>";
+        echo $name;
+    }
+}
+
+trait B
+{
+    public function display1() 
+    {
+        $name="Hi my name is Rahul"."<br>";
+        echo $name;
+    }
+   
+}
+
+trait C
+{
+    public function display2() 
+    {
+        $name="Hi my name is Deep"."<br>";
+        echo $name;
+    }
+   
+}
+
+class D
+{
+    use A,B,C;
+}
+$obj=new D;
+$obj->display();
+$obj->display1();
+$obj->display2();
+
+
+?>

@@ -1,0 +1,62 @@
+php first time released in 1994 by rasmus landroef
+php in 1994 stands for personal home page
+in 1996 php furthur extends for php:hypertext preprocessor.
+php is a server side scripting language
+php support all server 
+      ex: apache, iis, tomcat 
+php support some server tools that are :
+     ex: 1) xampp : 
+               x : x-cross plateform support all OS
+               a : apache (server)
+               m : mysql
+               p : perl(procedural based language)
+               p : php:hypertext preprocessor
+         2) wamp  :
+               x : windows family OS support
+               a : apache (server)
+               m : mysql
+               p : php:hypertext preprocessor
+         3) lamp  : 
+
+               x : linux/unix os only runn
+               a : apache (server)
+               m : mysql
+               p : php:hypertext preprocessor
+               
+
+php support all database 
+         ex: mysql, sqlite, sql server, mongodb, oracle etc.
+php is a open source language 
+         ex: free download without paying any charge
+         ex: php | java | android | react js | angular | node js 
+php is loosly typed of language 
+    Note : where we does not need to assign or declare a data type of variables that type of language called loosly type of language.
+
+      ex: $a=10;  //integer
+          $b="Brijesh kumar pandey"; //string
+          $c=10.54545; //float
+          $d='hi i am brijesh'; //string   
+
+Note : php is interpreter based language step by step code compilations intereprete based. 
+php file extention is .php , .php3 and .phtml
+but standard always is .php 
+
+php:php hypertext preprocessor 
+   Note : php will be preprocess before executions of hypertext(html) on server thats why php is called php hypertext preprocessor.
+
+php delemeter : how to start and closed  php that is called php delemeter.   
+
+  1) standard delemeter 
+     <?php 
+      statements;    
+     ?>   
+
+2) direct output delemeter
+    <?=
+     statements;
+    ?>
+
+
+
+
+

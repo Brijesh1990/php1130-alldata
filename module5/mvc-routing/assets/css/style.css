@@ -1,0 +1,67 @@
+.nav 
+{
+    width: 100%;
+    height: auto;
+}
+.nav ul li 
+{
+    display: inline-block;
+    padding: 2px 10px;
+}
+.nav a 
+{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+.logo 
+{
+    animation: 2s bounce infinite;
+}
+.ord 
+{
+    animation: 2s  heartBeat infinite;
+}
+.sidebar-link li 
+{
+    text-decoration: none;
+    list-style: none;
+    padding: 15px 5px;
+    
+}
+.sidebar-link a 
+{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    list-style-type: none;
+   
+}
+.footer-link li 
+{
+    text-decoration: none;
+    list-style: none;
+    padding: 15px 5px;
+}
+.footer-link a 
+{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.nav-links li 
+{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0px 2px !important;
+}
+.nav-links a 
+{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+.dropdown:hover .dropdown-menu
+{
+    display: block !important;
+}

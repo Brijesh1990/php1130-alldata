@@ -1,0 +1,411 @@
+SQL : stands for structured query language
+      sql is a case-insenstive language
+      examples : Insert , INSERT , insert
+      sql is used to create a database and tables structured.
+      
+      sql is used some query or commands that are 
+
+        1) DDL
+              ddl stands for data definition language
+              examples : create | alter | drop | truncate | rename | change
+
+              1) how to create a database 
+                  Note : A database where we stored informations or A database is a collection of data i.e called database.
+
+                  syntax : create database databasename;
+                  examples :create database shope_commerce;
+
+             2) how to create a tables 
+                  syntax : create table tablename 
+                           (
+                             columnname datatype(size) primary key auto_increment,
+                             columnanme1 datatype(size)
+
+                           )  
+
+                  examples : 
+
+create table tbl_customer
+(
+ custid int primary key AUTO_INCREMENT,
+ name varchar(100),
+ email varchar(255),
+ password varchar(255),
+ age int, 
+ salary float,
+ address text,
+ country varchar(255)   
+
+) 
+
+
+create table tbl_country 
+(
+ countryid int AUTO_INCREMENT primary key,
+ countryname varchar(255)   
+
+)
+
+
+Alter : alter are used to add | modify | change columns name in a tables.
+
+        1) new columns add with alter
+             a) alter table tbl_customer add state varchar(255);      
+             b) alter table tbl_customer add city varchar(255); 
+        2) change the columns name 
+             a) alter table tbl_customer change upload_photo  photo varchar(255);
+             
+
+change : change a column name it is a keyword in SQL 
+            a) alter table tbl_customer change upload_photo  photo varchar(255);
+             
+rename : rename is used to rename a tablename
+
+             a) rename table gallery to tbl_gallery;
+
+truncate :truncate is used to removed all rows from tables or empty all data from tables after truncate we never rollback any data.
+
+              a) truncate table tbl_country;
+ 
+
+drop  : drop is used to drop database or table also after drop we lost database and its all structured after drop we never rollback structured or data of tables.
+
+         a) drop database databasename;
+         b) drop table tablename;
+             drop table tbl_country;
+   
+ 
+        2) DML
+             dml stands for data manupulation language
+              examples : insert | delete | update  
+
+             a) insert : insert a new or multiple rows or data in tables
+
+                       a) single data insert
+
+                          insert into tablename (columnname) values('value');
+
+                           insert into tbl_gallery(photoname,descriptions) VALUES('1.jpg','good images');
+
+                     
+                        b) multiple data insert
+
+                          insert into tablename values('null','value'),('null','value2'),('value3');
+
+insert into tbl_gallery VALUES('null','2.jpg','nice'),('null','4.jpg','nice images');
+
+
+
+                       c) delete a data or table 
+                          1) delete from tablename;
+                          2) delete from tablename where id=2;
+                          3) delete from tablename where photoname='2.jpg';
+                          4) delete from tablename where  id in(1,2,4,5) 
+                           
+
+                          delete from tbl_gallery where gallid=1;
+                          delete from tbl_gallery where photoname='4.jpg';
+                          delete from tbl_gallery where gallid in(4,5);  
+
+                         d) update are used to update a rows or data
+
+                           update tbl_gallery  set photoname='natures.png',descriptions='natures is good for health' where gallid=2;
+
+
+                     
+   
+        3) DQL 
+             dql stands for data query language
+              examples : select
+
+                   a) select * from tablname;
+                         select * from tbl_country;
+                    b) select particular data
+                        select * from tbl_country where countryid=4;
+                    c) select * from tbl_country where countryname='india';
+                    d) select countryname from tbl_country;
+                    e) select * from tbl_country where countryid in (1,3);
+                    f) select * from tbl_country where countryname in ("india","srilanka");         
+                    g) select * from tbl_country where countryid BETWEEN 2 and 4; 
+                    h) SELECT * from tbl_country where countryid LIMIT 0,4;
+
+
+
+        4) TCL
+             tcl stands for transactional control language
+              examples : commit | rollback
+
+
+            Note : TCL is used for commit and rollback data
+
+                   commit : commit is used to save data after delete any data in sql
+                            Note : mysqli is not supported
+
+                            start TRANSACTION;
+DELETE from tbl_country where countryid=4;
+commit;                           
+   
+
+                   rollback :
+
+                       start TRANSACTION;
+select * from tbl_country where countryid=4;
+rollback;
+
+SQL function : There are two type of sql function
+                        a) aggrigate function 
+                           examples : avg() , count(), sum(), max(), min()
+
+                        b) scalar function 
+                           examples : first(), last(), lcase(), ucase() 
+
+
+  
+SQL function : There are two types of SQL functions 
+                a) aggrigate functions
+
+                     1) count : count a number of rows 
+                           examples : select count(empid) as total_employee from tbl_employee;
+
+                    2) sum : sum is used to sum of total salary
+                          examples : select sum(salary) as Total_sumof_salary from tbl_employee;
+
+                   3) select sum(salary),department from tbl_employee group by department;
+
+                   4) avg : average of any values 
+                           examples : select avg(salary) as average_of_salary from tbl_employee;
+
+                  5) max : find a max values of any rows or find max salary 
+
+                         examples : select max(salary) as highest_salary from tbl_employee
+
+
+                 6) min : find min values
+                        examples : select min(salary) as lowest_salary from tbl_employee
+
+                7) find a second highest salary from tbl_employee.
+                    note : subquery meanse query within another query
+     
+                    examples :select max(salary) from tbl_employee where salary < (select max(salary) from tbl_employee);
+
+                   examples : select max(salary) as second_highest_salary from tbl_employee where salary < (select max(salary) from tbl_employee);
+
+    
+      
+                b) scalar functions 
+                       
+                     1) first: find a first rows data
+                           examples : select first(empid) from tbl_employee;
+
+                     
+                     2) last: find a last rows data
+                           examples : select last(empid) from tbl_employee; 
+                     
+
+                     3) lcase: convert Uppercase rows data in lowercase
+                           examples : select lcase(lastname) from tbl_employee where empid=1;
+
+
+                     4) ucase : convert upercase rows data in tables  
+
+
+                      examples : select ucase(firstname) from tbl_employee where empid=1;
+
+                     examples :select ucase(firstname) from tbl_employee;
+
+
+
+
+SQL key constraints : 
+
+                         Key constraints provides limitation on tables 
+                         types of key constraints 
+                         a) primary key
+                         b) unique key
+                         c) foreign key
+                         d) compound key
+
+
+                         primary key : A PK is used to provides once time in a tables 
+                                       A pk is always autoincrments with pk
+                                       A pk never returns a null values.
+
+
+create table tbl_employee 
+(
+empid int AUTO_INCREMENT primary key,
+name varchar(255),
+firstname varchar(255),
+lastname varchar(255),
+password varchar(255),
+salary int,
+department varchar(255)    
+        
+)
+ 
+
+
+
+
+ unique key : A UK is used to provides more than once time in a tables 
+              A Uk is always defind uniquly
+              A uk  returns a one time a null values in a table.
+              A UK key never return a dublicate values
+
+
+               ALTER TABLE `tbl_employee` ADD UNIQUE(`email`);
+ 
+
+
+
+foregin key  : A fk is used to provides relationship between one tables to another tables 
+               A fk provides more than once time in a tbales on columns.
+               
+               tbl_country
+
+              countryid(pk)      countryname
+               1                  india
+               2                  usa 
+
+               tbl_state
+
+               stateid(pk)   statename   countryid(fk)
+                1             gujrat         1
+                2             california     2
+
+
+               tbl_city
+  
+                cityid       cityname     stateid(fk)
+                 1            rajkot         1
+                 2            ahemdabad      1
+                 3            badodra        1
+                 4            navada         2
+                
+
+create table tbl_country
+(
+countryid int AUTO_INCREMENT primary key,
+countryname varchar(255)    
+
+)
+ 
+
+Create a forien key
+
+create table tbl_state
+(
+stateid int AUTO_INCREMENT primary key,
+statename varchar(255),
+countryid int REFERENCES tbl_country(countryid)    
+
+)
+
+
+create table tbl_city
+(
+cityid int AUTO_INCREMENT primary key,
+cityname varchar(255),
+stateid int REFERENCES tbl_state(stateid)    
+
+)
+
+
+SQL joins : Joins are used to join more than one tables with common field or data in tables. 
+
+                    There are some types of joins 
+                     a) inner join 
+                     b) join 
+                     c) outer join 
+                           1) left outer join 
+                           2) right outer join 
+                           3) full outer join      
+                     d) cross join 
+
+   
+  a)  join : join and inner join both are similar 
+                  join or inner join is used to join data with matched tables with common field.
+
+     
+   join : select tbl_city.*,statename from tbl_city join tbl_state on tbl_city.stateid=tbl_state.stateid;
+
+
+
+  b) inner join : join and inner join both are similar 
+                  join or inner join is used to join data with matched tables with common field.
+
+     
+   inner join : select tbl_city.*,statename from tbl_city inner join tbl_state on tbl_city.stateid=tbl_state.stateid;
+
+
+c) outer join  
+
+        1) left join : left join is used to join first table of left rows with match with second table of left rows if data matched join all data otherwise return null value.
+
+               select tbl_city.*,statename from tbl_city left join tbl_state on tbl_city.stateid=tbl_state.stateid;
+
+
+        3) right join : right join is used to join second table of right rows with match with first  table of right rows if data matched join all data otherwise return null value.
+
+               select tbl_city.*,statename from tbl_city right join tbl_state on tbl_city.stateid=tbl_state.stateid;
+
+                 or
+
+
+               select tbl_state.*,countryname from tbl_state right join tbl_country on tbl_country.countryid=tbl_state.countryid;
+
+             or
+
+ select stateid,statename,countryname from tbl_state right join tbl_country on tbl_country.countryid=tbl_state.countryid;
+
+                   
+        3) full join : not supported in mysql   
+
+
+ 4)cross join : cross join are used to mutiply of each rows with tables and returns dublicate data with join .
+
+     examples :  select * from tbl_state cross join tbl_country;          
+
+  
+   SQL indexer : indexer are used to optimized a speed of tables or optimized speed of search any data quicky there we create index.
+                
+
+        There are two typs of index 
+            a) single indexer
+                  create index tbl_city_index on tbl_city (cityid);
+
+            b) composite indexer                  
+
+                create index tbl_city_index on tbl_city (cityid,cityname,stateid);     
+
+   SQL view  : sql view are used to create a clone of any tables .
+               or
+               view create a dublicate tables of main tables or clones of main tables.
+               view is always create a clone of tables and if users want to hide some data from some users there we create a views.
+       
+   
+
+             examples : create view city as select cityid,cityname,stateid from tbl_city where cityid=1;
+
+                 or
+
+            create view city as select cityid,cityname,stateid from tbl_city;
+            
+
+                 
+   
+
+   Note : SQL store proceedure are used to reused code one application to another store proceedure we used in asp.net.
+
+   SQL trigger : when we applied any query trigger will be fired.
+
+                 a) before insert => trigger fired.
+                 b) afetr insert => trigger fired.
+                 c) before update => trigger fired.
+                 d) afetr update => trigger fired.
+                 e) before delete => trigger fired.
+                 f) after delete => trigger fired.
+
+
+
+      
